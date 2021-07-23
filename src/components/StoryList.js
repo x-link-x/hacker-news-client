@@ -4,7 +4,9 @@ import Story from "../components/Story"
 
 const StoryList = ({stories}) => {
 
-    const storyNodes = stories.map(story => {
+    
+    
+    let storyNodes = stories.map(story => {
         return (
             <Story 
                 title={story.data.title} 
@@ -15,6 +17,8 @@ const StoryList = ({stories}) => {
             />
         )
     })
+    
+
 
     return (
         <>  
