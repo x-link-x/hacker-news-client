@@ -2,16 +2,25 @@ import React from "react";
 import Story from "../components/Story"
 
 
-const StoryList = () => {
+const StoryList = ({stories}) => {
+
+    const storyNodes = stories.map(story => {
+        return (
+            <Story 
+                title={story.data.title} 
+                author={story.data.by} 
+                url={story.data.url} 
+                key={story.data.id}
+                comments={story.data.descendants}
+            />
+        )
+    })
 
     return (
         <>  
-            <p>Story list here</p>
-            <Story/>
+            {storyNodes}
         </>
     )
-
-
     
 }
 

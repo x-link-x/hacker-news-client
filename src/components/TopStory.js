@@ -2,17 +2,26 @@ import React from "react";
 import Story from "../components/Story"
 
 
-const TopStory = () => {
+const TopStoryBox = ({topStory}) => {
 
-    return (
-        <>  
-            <p>Top story goes here</p>
-            <Story/>
-        </>
-    )
+
+    if (!topStory) {
+        return ""
+    } else { 
+        return (
+            <>  
+                <p>{topStory.title}</p>
+                <p>{topStory.by}</p>
+                <p>{topStory.url}</p>
+                
+                
+            </>
+        )
+    }
+    
 
 
     
 }
 
-export default TopStory;
+export default TopStoryBox;

@@ -1,0 +1,13 @@
+.story {
+    list-style: none;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 10px;
+    
+
+}
+
+.story > a {
+    color: black;
+}

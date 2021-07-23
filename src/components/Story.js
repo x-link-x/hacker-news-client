@@ -1,9 +1,17 @@
 import React from "react";
+import '../Story.css'
 
-const Story = () => {
+const Story = ({author, title, url, comments}) => {
     
     return (
-        <p>Story goes here</p>
+        <ul> 
+            <li className="story">
+                <a href={url}><h4>{title}</h4></a>
+                <p>{author}</p>
+                <p>Comments: {comments}</p>
+            </li>  
+        </ul>  
+        
     )
 }
 
