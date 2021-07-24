@@ -7,3 +7,31 @@
     white-space: nowrap;
     width: 1px;
 }
+
+#article-search {
+    /* width: 340px; */
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow-y: scroll;
+	word-wrap: break-word;
+    box-sizing: border-box;
+    font-size: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'Bitter';
+}
+
+#back-button {
+    font-family: 'Bitter', sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0c1f38;
+
+}
+
+.search {
+    font-family: 'Bitter';
+}
+
+

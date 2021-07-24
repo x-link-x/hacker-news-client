@@ -1,8 +1,8 @@
 import React from "react";
-import Story from "../components/Story"
+import Story from "../components/Story";
+import '../StoryList.css'
 
-
-const StoryList = ({stories}) => {
+const StoryList = ({stories, getTime}) => {
 
     if (!stories) {
         return <p>Loading</p>
@@ -11,26 +11,25 @@ const StoryList = ({stories}) => {
     
     let storyNodes = stories.map(story => {
         return (
-            <Story 
-                title={story.data.title} 
-                author={story.data.by} 
-                url={story.data.url} 
-                key={story.data.id}
-                comments={story.data.descendants}
-            />
+            
+                <Story 
+                    title={story.data.title} 
+                    author={story.data.by} 
+                    url={story.data.url} 
+                    key={story.data.id}
+                    comments={story.data.descendants}
+                    time={getTime(story.data.time)}
+                />
+            
         )
     })
     
-
-
     return (
-
         <>  
-            <h2>Top Stories</h2>
+            <h2 className="title">Hacker News Top Stories</h2>
             {storyNodes}
         </>
-    )
-    
+    )  
 }
 
 export default StoryList;

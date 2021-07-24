@@ -1,13 +1,16 @@
 .story {
     list-style: none;
-    border: 1px solid lightblue;
-    background-color: lightblue;
-    border-radius: 15px;
     padding: 10px;
-    
-
+    color: #1d3557;
+    border-bottom: 1px #e63946 solid;
+    width: 95%;
 }
 
 .story > a {
-    color: black;
+    color: #1d3557;
+    text-decoration: none;
+}
+
+.date {
+    color: #457b9d;
 }

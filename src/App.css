@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  background-color: #f1faee;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&display=swap');
+
 
 .App-logo {
   height: 40vmin;
