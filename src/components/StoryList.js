@@ -4,6 +4,9 @@ import Story from "../components/Story"
 
 const StoryList = ({stories}) => {
 
+    if (!stories) {
+        return <p>Loading</p>
+    }
     
     
     let storyNodes = stories.map(story => {
@@ -21,7 +24,9 @@ const StoryList = ({stories}) => {
 
 
     return (
+
         <>  
+            <h2>Top Stories</h2>
             {storyNodes}
         </>
     )

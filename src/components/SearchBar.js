@@ -1,20 +1,22 @@
 import React from "react";
 import "../SearchBar.css"
 
-const SearchBar = ({onSearch}) => {
+const SearchBar = ({query, updateQuery}) => {
+    
     return (
-        <form action="/search" method="GET">
+        <>
             <label htmlFor="article-search">
                 <span className="visually-hidden">Search Articles</span>
             </label>
             <input
+                key="le39sdj"
                 type="text"
                 id="article-search"
                 placeholder="Search Articles"
-                name="query"
+                value={query}
+                onChange={(e) => updateQuery(e.target.value)}
             />
-            <button type="submit" onClick={onSearch}>Search</button>
-        </form>
+        </>
     )
 }
 
