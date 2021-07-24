@@ -26,7 +26,7 @@ const StoryList = ({stories, getTime}) => {
     
     return (
         <>  
-            <h2 className="title">Hacker News Top Stories</h2>
+            <h2 className="title">Hacker News Latest Stories</h2>
             {storyNodes}
         </>
     )  

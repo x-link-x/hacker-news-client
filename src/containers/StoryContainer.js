@@ -10,13 +10,12 @@ const StoryContainer = () => {
     
     const [stories, setStories] = useState([]);
     const [query, setQuery] = useState('');
-    const [comments, setComments] = useState([]);
     
     const fetchData = async () => {
         return await axios.get("https://hacker-news.firebaseio.com/v0/topstories.json")
             .then(res => res.data)
             .then(ids => ids.splice(0, 50))
-            .then(storyIds => Promise.all(storyIds.map(storyID => axios.get(`https://hacker-news.firebaseio.com/v0/item/${storyID}.json`))))
+            .then(storyIDs => Promise.all(storyIDs.map(storyID => axios.get(`https://hacker-news.firebaseio.com/v0/item/${storyID}.json`))))
             .then(stories => setStories(stories))
     }
 
@@ -35,7 +34,6 @@ const StoryContainer = () => {
         let date = moment.unix(storyTime)
         return <Moment className="date" format="DD MMMM YYYY hh:mm:ss">{date}</Moment>
     }
-
 
     return (
         <div className="container">  
